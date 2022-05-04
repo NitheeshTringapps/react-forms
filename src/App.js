@@ -21,12 +21,12 @@ function App() {
         {errors?.email?.type === "required" && <p>This field is required</p>}
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" {...register("password", { required: true, pattern: /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/i })}/><br/><br/>
+        <input type="password" id="password" name="password" {...register("password", { required: true, pattern: "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$" })}/><br/><br/>
         {errors?.password?.type === "required" && <p>This field is required</p>}
         {errors?.password?.type === "pattern" && (<p>Enter valid format!</p>)}
 
         <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" {...register("confirmPassword", { required: true, pattern: /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/i  })}/><br/><br/>
+        <input type="password" id="confirmPassword" name="confirmPassword" {...register("confirmPassword", { required: true, pattern: "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$"  })}/><br/><br/>
         {errors?.confirmPassword?.type === "required" && <p>This field is required</p>}
         {errors?.confirmPassword?.type === "pattern" && (<p>Enter valid format!</p>)}
 
