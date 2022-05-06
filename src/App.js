@@ -10,7 +10,7 @@ function App() {
       <form className='form' onSubmit={handleSubmit(onSubmit)}>
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname" {...register("firstName", { required: true })}/><br/><br/>
-        {errors?.firstName?.type === "required" && <p>This field is required</p>}
+        {errors?.firstName?.type === "required" && <p>This field is required</p>} 
 
         <label for="lname">Last name:</label>
         <input type="text" id="lname" name="lname" {...register("lastName", { required: true })}/><br/><br/>
